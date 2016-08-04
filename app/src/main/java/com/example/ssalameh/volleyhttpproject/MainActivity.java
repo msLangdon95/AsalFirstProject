@@ -1,5 +1,4 @@
 package com.example.ssalameh.volleyhttpproject;
-
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         limit = 10;
         ParsedCity = "";
         City = ((EditText) findViewById(R.id.where)).getText().toString();
-        City = new LanguageTranslation().execute(City).get(); // ---> this get sentence takes toooooo looooooooooong
+        City = new LanguageTranslation().execute(City).get();
         String[] result = City.split("\\s");
         int i = 0;
         for (; i < result.length - 1; i++)

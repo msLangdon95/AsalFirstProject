@@ -42,7 +42,8 @@ public class SecondActivity extends ListActivity {
         SeeMoreResult = new Bucket();
         adapter = new MobileArrayAdapter(this, Recieved.ParsedObject);
         list.setAdapter(adapter);
-        if (!Recieved.ParsedObject.EmptyFlag)
+        Log.d("ss",String.valueOf(Recieved.ParsedObject.Names.size()));
+        if (!Recieved.ParsedObject.EmptyFlag && Recieved.ParsedObject.Names.size()>=10)
             list.addFooterView(footerLayout);
         SeeMore.setOnClickListener(new View.OnClickListener(){// SeeMoreButtonHandler
             public void onClick(View v) {
